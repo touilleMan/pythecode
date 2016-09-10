@@ -290,7 +290,6 @@ class Interpreter:
         assert not len_kw, 'Not supported kwargs'
         # right-most parameter on top of the stack
         posargs = list(reversed([self.pop_stack() for _ in range(len_pos)]))
-        import pdb; pdb.set_trace()
         func = self.pop_stack()
         pre_call_stack_ptr = len(self._stack)
         if isinstance(func, Function):
